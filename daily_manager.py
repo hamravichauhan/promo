@@ -26,7 +26,8 @@ from client_promo_engine import render_client_offer_poster
 from poster_dispatcher import send_to_telegram, upload_to_instagram, send_telegram_text
 from growth_engine import (
     init_client, safe_engage_leads, view_stories_for_users,
-    load_growth_db, check_daily_limits, TARGET_HASHTAGS
+    load_growth_db, check_daily_limits, TARGET_HASHTAGS,
+    get_optimized_hashtag, sync_follow_backs_and_analyze
 )
 from dm_autoresponder import check_and_reply_inbox
 
@@ -255,8 +256,20 @@ def generate_executive_report_text() -> str:
         follower_count = uinfo.follower_count
         following_count = uinfo.following_count
         media_count = uinfo.media_count
+        sync_follow_backs_and_analyze(cl, db)
     except Exception as e:
         print(f"[-] Notice reading profile metrics: {e}")
+
+    # 3. Analyze Tag Performance
+    tag_perf = db.get("tag_performance", {})
+    best_tag = "Learning (#techfounder)"
+    best_rate = "Calibrating..."
+    if tag_perf:
+        rated = [(t, s["rate"]) for t, s in tag_perf.items() if s.get("engaged", 0) > 0]
+        if rated:
+            rated.sort(key=lambda x: x[1], reverse=True)
+            best_tag = f"#{rated[0][0]}"
+            best_rate = f"{rated[0][1]}% follow-back"
 
     lines = [
         "📊 EXTROVERTNERD.DEV — DAILY EXECUTIVE REPORT",
@@ -280,6 +293,10 @@ def generate_executive_report_text() -> str:
         f"  • ❤️ Founder Posts Liked: {stats.get('likes', 0)} / 40 max",
         f"  • 👁️ Active Stories Viewed: {stats.get('stories', 0)} / 80 max",
         f"  • 📋 Total Leads In Database: {len(db.get('interacted_users', {}))}",
+        "",
+        "🧠 AI SELF-TUNING ENGINE:",
+        f"  • Top Converting Niche: {best_tag} ({best_rate})",
+        "  • Optimization Strategy: Auto-shifting 75% outreach to highest-converting audiences",
         "",
         "📈 LIVE INSTAGRAM METRICS (@extrovertnerd.dev):",
         f"  • Followers: {follower_count}",

@@ -103,6 +103,81 @@ def init_client() -> Client:
     return cl
 
 
+def sync_follow_backs_and_analyze(cl: Client, db: dict) -> dict:
+    """
+    Auto-detects which engaged leads have followed us back.
+    Calculates conversion rate by hashtag / niche.
+    """
+    try:
+        my_followers = set(cl.user_followers(cl.user_id).keys())
+    except Exception as e:
+        print(f"[-] Follower sync notice: {e}")
+        my_followers = set()
+
+    tag_stats = {}
+    for tag in TARGET_HASHTAGS:
+        tag_stats[tag] = {"engaged": 0, "followed_back": 0, "rate": 0.0}
+
+    new_follow_backs = 0
+    for uid_str, data in db.get("interacted_users", {}).items():
+        tag = data.get("source_hashtag", "general")
+        if tag not in tag_stats:
+            tag_stats[tag] = {"engaged": 0, "followed_back": 0, "rate": 0.0}
+
+        tag_stats[tag]["engaged"] += 1
+
+        try:
+            uid_int = int(uid_str)
+            if uid_int in my_followers:
+                if not data.get("followed_back"):
+                    data["followed_back"] = True
+                    data["followed_back_at"] = datetime.now().isoformat()
+                    new_follow_backs += 1
+                tag_stats[tag]["followed_back"] += 1
+        except Exception:
+            pass
+
+    for tag, s in tag_stats.items():
+        if s["engaged"] > 0:
+            s["rate"] = round((s["followed_back"] / s["engaged"]) * 100, 1)
+
+    db["tag_performance"] = tag_stats
+    save_growth_db(db)
+
+    if new_follow_backs > 0:
+        print(f"🎉 [self_optimizer] Detected {new_follow_backs} new follow-backs!")
+
+    return tag_stats
+
+
+def get_optimized_hashtag(db: dict) -> tuple:
+    """
+    Self-optimizing Multi-Armed Bandit algorithm.
+    75% of the time: Exploit top-converting hashtag.
+    25% of the time: Explore new / secondary hashtags.
+    """
+    tag_perf = db.get("tag_performance", {})
+    if not tag_perf:
+        return random.choice(TARGET_HASHTAGS), "exploration"
+
+    qualified = [
+        (tag, stats["rate"])
+        for tag, stats in tag_perf.items()
+        if stats.get("engaged", 0) >= 2 and stats.get("rate", 0) > 0
+    ]
+    qualified.sort(key=lambda x: x[1], reverse=True)
+
+    if qualified and random.random() < 0.75:
+        best_tag, best_rate = qualified[0]
+        return best_tag, f"top_performer ({best_rate}% win rate)"
+
+    untested = [t for t in TARGET_HASHTAGS if tag_perf.get(t, {}).get("engaged", 0) < 5]
+    if untested:
+        return random.choice(untested), "exploration"
+
+    return random.choice(TARGET_HASHTAGS), "random_rotation"
+
+
 def view_stories_for_users(cl: Client, user_ids: list, db: dict, max_count: int = 50) -> int:
     """Views stories of target leads. Extremely safe, triggers profile visits."""
     stats, today = check_daily_limits(db)
