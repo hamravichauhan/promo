@@ -1,13 +1,12 @@
 {
-  "current_day": 1,
+  "current_day": 2,
   "history": [
     {
       "day": 1,
       "title": "The 3-Second Rule That Kills 53% of Your Sales",
-      "timestamp": "2026-11-03T12:25:26.738929",
-      "image": "/Users/ravichauhan/Desktop/MY RROJECT /promo/output/day_001_playbook_dark.jpg",
-      "telegram_sent": false,
-      "instagram_uploaded": false
+      "timestamp": "2026-11-03T12:31:18",
+      "telegram_sent": true,
+      "instagram_uploaded": true
     }
   ]
 }
