@@ -338,7 +338,7 @@ def auto_detect_session():
 
 def main():
     parser = argparse.ArgumentParser(description="Multi-Session Daily Manager for @extrovertnerd.dev")
-    parser.add_argument("--session", type=str, choices=["morning", "midday", "evening", "night", "auto"], default="auto", help="Session to run")
+    parser.add_argument("--session", type=str, default="auto", help="Session to run (morning, midday, evening, night, auto)")
     parser.add_argument("--report", action="store_true", help="Send End-of-Day Executive Report to Telegram now")
     parser.add_argument("--no-telegram", action="store_true", help="Skip sending to Telegram")
     parser.add_argument("--no-ig", action="store_true", help="Skip uploading to Instagram")
@@ -349,7 +349,11 @@ def main():
         send_daily_executive_report()
         return
 
-    session = args.session
+    session = (args.session or "auto").strip().lower()
+    if session not in ["morning", "midday", "evening", "night", "auto"]:
+        print(f"[-] Unrecognized session '{args.session}', defaulting to 'auto'.")
+        session = "auto"
+
     if session == "auto":
         session = auto_detect_session()
         print(f"[*] Auto-detected session based on IST clock ({get_ist_now().strftime('%H:%M')} IST): {session.upper()}")

@@ -317,7 +317,7 @@ PLAYBOOK_100 = [
         "track": TRACKS["PERFORMANCE"],
         "title": "The Mobile CPU Bottleneck: Why Low-End Phones Crash",
         "highlight": "LOW-END PHONES",
-        "subhook": "Your M3 MacBook runs bloated JavaScript effortlessly. A \$150 Android phone does not.",
+        "subhook": "Your M3 MacBook runs bloated JavaScript effortlessly. A $150 Android phone does not.",
         "visual_type": "metric_audit",
         "visual_data": {
             "score": "4x",
@@ -549,9 +549,9 @@ PLAYBOOK_100 = [
     {
         "day": 47,
         "track": TRACKS["AUTOMATION"],
-        "title": "The Monthly SaaS Tax: Save \$12,000/Year with Custom Internal Tools",
+        "title": "The Monthly SaaS Tax: Save $12,000/Year with Custom Internal Tools",
         "highlight": "SAVE $12,000/YEAR",
-        "subhook": "Stop paying \$50/seat/month for 5 different software tools that don't even talk to each other.",
+        "subhook": "Stop paying $50/seat/month for 5 different software tools that don't even talk to each other.",
         "visual_type": "before_after",
         "visual_data": {
             "before_title": "✕ 5 MONTHLY SAAS SUBSCRIPTIONS",

@@ -2,14 +2,12 @@ name: 24/7 Multi-Session Client Acquisition & Growth Engine
 
 on:
   schedule:
-    # 09:30 AM IST (04:00 UTC) - Morning Web Playbook + Micro Growth
-    - cron: '0 4 * * *'
-    # 01:30 PM IST (08:00 UTC) - Midday Client Offer + Story Blitz
-    - cron: '0 8 * * *'
-    # 05:30 PM IST (12:00 UTC) - Evening Web Playbook + Micro Growth
-    - cron: '0 12 * * *'
-    # 09:30 PM IST (16:00 UTC) - Night Client Offer + Full Day Executive Report to Telegram
-    - cron: '0 16 * * *'
+    # Run 5 minutes past the target hour to completely bypass GitHub's top-of-the-hour (:00) queue gridlock
+    # 09:35 AM IST (04:05 UTC) - Morning Web Playbook + Micro Growth
+    # 01:35 PM IST (08:05 UTC) - Midday Client Offer + Story Blitz
+    # 05:35 PM IST (12:05 UTC) - Evening Web Playbook + Micro Growth
+    # 09:35 PM IST (16:05 UTC) - Night Client Offer + Full Day Executive Report to Telegram
+    - cron: '5 4,8,12,16 * * *'
 
   workflow_dispatch:
     inputs:
@@ -57,13 +55,14 @@ jobs:
           IG_SESSION_JSON: ${{ secrets.IG_SESSION_JSON }}
           IG_USERNAME: ${{ secrets.IG_USERNAME }}
           IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
-          TARGET_SESSION: ${{ github.event.inputs.session || 'auto' }}
+          TARGET_SESSION: ${{ inputs.session || github.event.inputs.session || 'auto' }}
         run: |
-          echo "Target Session: $TARGET_SESSION"
-          if [ "$TARGET_SESSION" = "report" ]; then
+          SESSION="${TARGET_SESSION:-auto}"
+          echo "Target Session: $SESSION"
+          if [ "$SESSION" = "report" ]; then
             python daily_manager.py --report
           else
-            python daily_manager.py --session "$TARGET_SESSION"
+            python daily_manager.py --session "$SESSION"
           fi
 
       - name: Commit & Push Progress Advancement
