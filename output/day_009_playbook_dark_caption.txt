@@ -1,0 +1,33 @@
+DM for custom tools & websites 🚀
+━━━━━━━━━━━━━━━━━━━━━
+DAY 09 / 100: Native Lazy Loading: Saving Megabytes of Data on Mobile
+
+Never download assets the user hasn't scrolled to yet.
+
+Key takeaways to apply to your website today:
+
+• 01 / Add loading='lazy' to Below-the-Fold
+  Images below the screen will wait until the user scrolls within 500px.
+
+• 02 / Mark Hero Image 'fetchpriority=high'
+  Tells the browser to download the primary hero image before anything else.
+
+• 03 / Lazy-Load YouTube & Map Iframes
+  Save 800KB of tracking scripts by lazy-loading third-party video embeds.
+
+━━━━━━━━━━━━━━━━━━━━━
+💼 NEED A HIGH-PERFORMANCE WEBSITE OR CUSTOM WEB TOOL?
+
+If you're running a business and want:
+✅ A blazing-fast, high-converting website
+✅ A custom internal software tool / automation dashboard
+✅ To eliminate manual spreadsheets and save 100+ hours every month
+
+📩 Send me a DM on Instagram: @extrovertnerd.dev (Type 'BUILD')
+📧 Or email directly: extrovertnerd.dev@gmail.com
+
+Let's build something exceptional for your business. 🚀
+
+.
+.
+#html5 #weboptimization #frontenddev #codetips #ux #extrovertnerd #webdevelopment #customtools #websitetips #buildinpublic #businessgrowth #techagency

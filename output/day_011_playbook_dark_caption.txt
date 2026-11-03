@@ -1,0 +1,33 @@
+DM for custom tools & websites 🚀
+━━━━━━━━━━━━━━━━━━━━━
+DAY 11 / 100: Third-Party Script Audit: Who Is Really Slowing Down Your Site?
+
+Heatmaps, chat widgets, and 4 different analytics tags silently kill page speed.
+
+Key takeaways to apply to your website today:
+
+• 01 / Use Partytown
+  Run third-party scripts (Google Analytics, Meta Pixel) in a web worker off the main thread.
+
+• 02 / Remove Zombie Scripts
+  Old marketing campaigns frequently leave unused tracking pixels running forever.
+
+• 03 / Load Chat Widgets on Intent
+  Replace heavy Intercom or Crisp embeds with a lightweight button that loads on click.
+
+━━━━━━━━━━━━━━━━━━━━━
+💼 NEED A HIGH-PERFORMANCE WEBSITE OR CUSTOM WEB TOOL?
+
+If you're running a business and want:
+✅ A blazing-fast, high-converting website
+✅ A custom internal software tool / automation dashboard
+✅ To eliminate manual spreadsheets and save 100+ hours every month
+
+📩 Send me a DM on Instagram: @extrovertnerd.dev (Type 'BUILD')
+📧 Or email directly: extrovertnerd.dev@gmail.com
+
+Let's build something exceptional for your business. 🚀
+
+.
+.
+#webperf #analytics #siteaudit #javascript #digitalmarketing #extrovertnerd #webdevelopment #customtools #websitetips #buildinpublic #businessgrowth #techagency

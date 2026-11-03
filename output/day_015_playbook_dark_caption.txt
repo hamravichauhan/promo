@@ -1,0 +1,33 @@
+DM for custom tools & websites 🚀
+━━━━━━━━━━━━━━━━━━━━━
+DAY 15 / 100: The Google Lighthouse 100/100 Checklist: What Actually Counts
+
+Don't chase vanity numbers—focus on the 3 metrics that drive real business growth.
+
+Key takeaways to apply to your website today:
+
+• 01 / LCP is 25% of Your Score
+  Your hero image or primary headline must paint in under 1.2 seconds.
+
+• 02 / TBT (Total Blocking Time) is 30%
+  Eliminate heavy scripts executing during the first 3 seconds of page load.
+
+• 03 / Accessibility is Free SEO
+  Adding alt tags, semantic HTML tags, and ARIA labels lifts both UX and search rank.
+
+━━━━━━━━━━━━━━━━━━━━━
+💼 NEED A HIGH-PERFORMANCE WEBSITE OR CUSTOM WEB TOOL?
+
+If you're running a business and want:
+✅ A blazing-fast, high-converting website
+✅ A custom internal software tool / automation dashboard
+✅ To eliminate manual spreadsheets and save 100+ hours every month
+
+📩 Send me a DM on Instagram: @extrovertnerd.dev (Type 'BUILD')
+📧 Or email directly: extrovertnerd.dev@gmail.com
+
+Let's build something exceptional for your business. 🚀
+
+.
+.
+#lighthouse #google #seo #webdev #siteaudit #entrepreneur #extrovertnerd #webdevelopment #customtools #websitetips #buildinpublic #businessgrowth #techagency

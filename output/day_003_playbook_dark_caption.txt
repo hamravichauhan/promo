@@ -1,0 +1,33 @@
+DM for custom tools & websites 🚀
+━━━━━━━━━━━━━━━━━━━━━
+DAY 03 / 100: TTFB Explained: How to Serve Pages in 50 Milliseconds
+
+Time To First Byte is the foundation of user perception and Google ranking.
+
+Key takeaways to apply to your website today:
+
+• 01 / Implement Stale-While-Revalidate
+  Serve cached versions immediately while asynchronously revalidating in the background.
+
+• 02 / Choose Modern Edge Hosting
+  Move off shared cPanel hosting to Vercel, Cloudflare Pages, or AWS CloudFront.
+
+• 03 / Optimize Database Lookups
+  Cache dynamic database queries with Redis so repeated visits never hit disk.
+
+━━━━━━━━━━━━━━━━━━━━━
+💼 NEED A HIGH-PERFORMANCE WEBSITE OR CUSTOM WEB TOOL?
+
+If you're running a business and want:
+✅ A blazing-fast, high-converting website
+✅ A custom internal software tool / automation dashboard
+✅ To eliminate manual spreadsheets and save 100+ hours every month
+
+📩 Send me a DM on Instagram: @extrovertnerd.dev (Type 'BUILD')
+📧 Or email directly: extrovertnerd.dev@gmail.com
+
+Let's build something exceptional for your business. 🚀
+
+.
+.
+#nextjs #caching #ttfb #backend #webdevelopment #cloudflare #extrovertnerd #webdevelopment #customtools #websitetips #buildinpublic #businessgrowth #techagency

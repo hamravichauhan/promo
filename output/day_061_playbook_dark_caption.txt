@@ -1,0 +1,33 @@
+DM for custom tools & websites 🚀
+━━━━━━━━━━━━━━━━━━━━━
+DAY 61 / 100: The Golden Ratio of Web Typography: Hierarchy That Guides the Eye
+
+When everything looks bold and important, nothing looks important.
+
+Key takeaways to apply to your website today:
+
+• 01 / Limit Body Line Length to 65 Chars
+  Overly wide text lines strain the eyes as they travel back to find the next sentence.
+
+• 02 / High Contrast Colors
+  Never use light gray text on white backgrounds. Ensure minimum WCAG AAA 7:1 contrast.
+
+• 03 / Maximum 2 Font Families
+  Use one expressive font for headlines and one ultra-legible neutral font for body copy.
+
+━━━━━━━━━━━━━━━━━━━━━
+💼 NEED A HIGH-PERFORMANCE WEBSITE OR CUSTOM WEB TOOL?
+
+If you're running a business and want:
+✅ A blazing-fast, high-converting website
+✅ A custom internal software tool / automation dashboard
+✅ To eliminate manual spreadsheets and save 100+ hours every month
+
+📩 Send me a DM on Instagram: @extrovertnerd.dev (Type 'BUILD')
+📧 Or email directly: extrovertnerd.dev@gmail.com
+
+Let's build something exceptional for your business. 🚀
+
+.
+.
+#typography #webdesign #uiux #designsystem #frontend #extrovertnerd #webdevelopment #customtools #websitetips #buildinpublic #businessgrowth #techagency

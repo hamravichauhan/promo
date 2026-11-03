@@ -1,0 +1,33 @@
+DM for custom tools & websites 🚀
+━━━━━━━━━━━━━━━━━━━━━
+DAY 06 / 100: JavaScript Defer vs Async: Unblock the Browser Main-Thread
+
+Parsing synchronous scripts stops your page from rendering completely.
+
+Key takeaways to apply to your website today:
+
+• 01 / Default to 'defer'
+  Preserves script execution order while allowing HTML to construct without pause.
+
+• 02 / Dynamic Import Heavy Widgets
+  Only load chat widgets and interactive maps when the user scrolls near them.
+
+• 03 / Use Web Workers for Heavy Math
+  Offload complex data processing off the UI thread to keep scrolling butter-smooth.
+
+━━━━━━━━━━━━━━━━━━━━━
+💼 NEED A HIGH-PERFORMANCE WEBSITE OR CUSTOM WEB TOOL?
+
+If you're running a business and want:
+✅ A blazing-fast, high-converting website
+✅ A custom internal software tool / automation dashboard
+✅ To eliminate manual spreadsheets and save 100+ hours every month
+
+📩 Send me a DM on Instagram: @extrovertnerd.dev (Type 'BUILD')
+📧 Or email directly: extrovertnerd.dev@gmail.com
+
+Let's build something exceptional for your business. 🚀
+
+.
+.
+#javascript #frontend #webperformance #codingtips #devcommunity #extrovertnerd #webdevelopment #customtools #websitetips #buildinpublic #businessgrowth #techagency

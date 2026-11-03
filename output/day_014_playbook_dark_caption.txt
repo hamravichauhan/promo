@@ -1,0 +1,33 @@
+DM for custom tools & websites 🚀
+━━━━━━━━━━━━━━━━━━━━━
+DAY 14 / 100: The Mobile CPU Bottleneck: Why Low-End Phones Crash
+
+Your M3 MacBook runs bloated JavaScript effortlessly. A $150 Android phone does not.
+
+Key takeaways to apply to your website today:
+
+• 01 / Test with 4x CPU Throttling
+  Always open Chrome DevTools > Performance and enable 4x slowdown simulation.
+
+• 02 / Remove Complex JS Animation Libraries
+  Replace heavy GreenSock or Framer Motion variants with hardware-accelerated CSS transforms.
+
+• 03 / Tree-Shake Unused Dependencies
+  Never import an entire icon library when you only need 4 icons.
+
+━━━━━━━━━━━━━━━━━━━━━
+💼 NEED A HIGH-PERFORMANCE WEBSITE OR CUSTOM WEB TOOL?
+
+If you're running a business and want:
+✅ A blazing-fast, high-converting website
+✅ A custom internal software tool / automation dashboard
+✅ To eliminate manual spreadsheets and save 100+ hours every month
+
+📩 Send me a DM on Instagram: @extrovertnerd.dev (Type 'BUILD')
+📧 Or email directly: extrovertnerd.dev@gmail.com
+
+Let's build something exceptional for your business. 🚀
+
+.
+.
+#mobileweb #frontend #javascript #optimization #techinsights #extrovertnerd #webdevelopment #customtools #websitetips #buildinpublic #businessgrowth #techagency
