@@ -27,8 +27,8 @@ except ImportError:
                     k, v = line.split("=", 1)
                     os.environ[k.strip()] = v.strip().strip('"').strip("'")
 
-TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "9009008011:AAFn9g5l_wCOAsilKmLwBb7PKH9O2iVQ8ME").strip()
-TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "1432790039").strip()
+TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
 
 def send_telegram_text(message: str) -> bool:
