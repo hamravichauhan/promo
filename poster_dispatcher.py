@@ -32,7 +32,8 @@ TELEGRAM_CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "").strip()
 
 
 def send_telegram_text(message: str) -> bool:
-    """Sends a formatted text message (such as the End-of-Day Executive Report) to the Telegram bot."""
+    """Sends a formatted text message to the Telegram bot with automatic retry."""
+    import time
     token = os.getenv("TELEGRAM_BOT_TOKEN", TELEGRAM_BOT_TOKEN).strip()
     chat_id = os.getenv("TELEGRAM_CHAT_ID", TELEGRAM_CHAT_ID).strip()
 
@@ -42,18 +43,22 @@ def send_telegram_text(message: str) -> bool:
 
     url = f"https://api.telegram.org/bot{token}/sendMessage"
     payload = json.dumps({"chat_id": chat_id, "text": message}).encode("utf-8")
-    req = urllib.request.Request(
-        url,
-        data=payload,
-        headers={"Content-Type": "application/json"}
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=20) as res:
-            data = json.loads(res.read().decode("utf-8"))
-            return data.get("ok", False)
-    except Exception as e:
-        print(f"[-] Telegram text exception: {e}")
-        return False
+    
+    for attempt in range(1, 4):
+        try:
+            req = urllib.request.Request(
+                url,
+                data=payload,
+                headers={"Content-Type": "application/json"}
+            )
+            with urllib.request.urlopen(req, timeout=20) as res:
+                data = json.loads(res.read().decode("utf-8"))
+                return data.get("ok", False)
+        except Exception as e:
+            print(f"[-] Telegram attempt {attempt} failed: {e}")
+            if attempt < 3:
+                time.sleep(2)
+    return False
 
 
 def send_to_telegram(photo_path_or_url: str, caption_text: str = "") -> bool:
