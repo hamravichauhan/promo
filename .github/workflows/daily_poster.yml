@@ -1,16 +1,27 @@
-name: Daily Web Playbook Poster Dispatcher
+name: Daily Web Playbook & Client Growth Engine
 
 on:
   schedule:
     # Runs everyday at 10:00 AM IST (04:30 AM UTC)
     - cron: '30 4 * * *'
-  workflow_dispatch: # Allows manual 1-click execution anytime
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'Execution Mode'
+        required: true
+        default: 'playbook_and_grow'
+        type: choice
+        options:
+          - playbook_and_grow
+          - client_offer_promo
+          - growth_only
+          - playbook_only
 
 permissions:
   contents: write
 
 jobs:
-  dispatch_poster:
+  run_pipeline:
     runs-on: ubuntu-latest
 
     steps:
@@ -30,25 +41,37 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Generate Today's Poster & Dispatch
+      - name: Execute Daily Pipeline
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           IG_SESSION_JSON: ${{ secrets.IG_SESSION_JSON }}
           IG_USERNAME: ${{ secrets.IG_USERNAME }}
           IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
+          RUN_MODE: ${{ github.event.inputs.mode || 'playbook_and_grow' }}
         run: |
-          python make_poster.py --today --send-telegram --upload-ig
+          echo "Executing Mode: $RUN_MODE"
+          if [ "$RUN_MODE" = "playbook_and_grow" ]; then
+            python make_poster.py --today --send-telegram --upload-ig --grow
+          elif [ "$RUN_MODE" = "client_offer_promo" ]; then
+            python make_poster.py --promo --send-telegram --upload-ig --grow
+          elif [ "$RUN_MODE" = "growth_only" ]; then
+            python growth_engine.py --auto
+          elif [ "$RUN_MODE" = "playbook_only" ]; then
+            python make_poster.py --today --send-telegram --upload-ig
+          else
+            python make_poster.py --today --send-telegram --upload-ig --grow
+          fi
 
-      - name: Commit & Push Progress Advancement
+      - name: Commit & Push Progress & Growth State
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/progress.json
-          git commit -m "chore: auto-advance playbook to next day [skip ci]" || echo "No progress changes to commit"
+          git add data/progress.json data/growth_state.json || true
+          git commit -m "chore: update daily playbook progress & growth state [skip ci]" || echo "No changes to commit"
           git push
 
-      - name: Archive Today's Poster & Caption
+      - name: Archive Today's Generated Outputs
         uses: actions/upload-artifact@v4
         if: always()
         with:
