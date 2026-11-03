@@ -1,0 +1,40 @@
+{
+  "interacted_users": {
+    "75705826036": {
+      "username": "kayvon.ai",
+      "followed_at": "2026-11-03T13:13:54.019667",
+      "followed": true,
+      "source_hashtag": "techfounder",
+      "stories_viewed_at": "2026-11-03T13:19:18.390741"
+    },
+    "266064756": {
+      "username": "mr.grateful",
+      "followed_at": "2026-11-03T13:15:48.778427",
+      "followed": true,
+      "source_hashtag": "techfounder"
+    },
+    "14808288": {
+      "username": "kameronmonet",
+      "followed_at": "2026-11-03T13:17:09.636506",
+      "followed": true,
+      "source_hashtag": "techfounder",
+      "stories_viewed_at": "2026-11-03T13:19:51.467130"
+    },
+    "191436825": {
+      "username": "c.colasse",
+      "followed_at": "2026-11-03T13:18:19.834248",
+      "followed": true,
+      "source_hashtag": "techfounder",
+      "stories_viewed_at": "2026-11-03T13:20:04.492727"
+    }
+  },
+  "daily_stats": {
+    "2026-11-03": {
+      "follows": 4,
+      "likes": 5,
+      "stories": 18,
+      "dms": 0
+    }
+  },
+  "last_run": "2026-11-03T13:20:12.557240"
+}
