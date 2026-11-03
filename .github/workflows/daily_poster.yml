@@ -1,7 +1,14 @@
 name: 24/7 Multi-Session Client Acquisition & Growth Engine
 
-# ALL AUTOMATED SCHEDULES DISABLED
 on:
+  schedule:
+    # 4 Sessions per day (IST is UTC+5:30):
+    # 04:00 UTC = 09:30 AM IST (Morning: Playbook to @extrovertnerd.dev)
+    # 08:00 UTC = 01:30 PM IST (Midday: Client Offer to @extrovertnerd)
+    # 12:00 UTC = 05:30 PM IST (Evening: Playbook to @extrovertnerd.dev)
+    # 16:00 UTC = 09:30 PM IST (Night: Client Offer to @extrovertnerd + Full Dual-Channel Report)
+    - cron: '0 4,8,12,16 * * *'
+
   workflow_dispatch:
     inputs:
       session:
@@ -34,42 +41,29 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip'
 
-      - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-
-      - name: Execute Session & Autonomous Growth
+      - name: Execute Dual-Channel Session & Meta Graph Publish
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          IG_SESSION_JSON: ${{ secrets.IG_SESSION_JSON }}
-          IG_USERNAME: ${{ secrets.IG_USERNAME }}
-          IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
+          IG_DEV_ID: ${{ secrets.IG_DEV_ID }}
+          IG_DEV_TOKEN: ${{ secrets.IG_DEV_TOKEN }}
+          IG_AGENCY_ID: ${{ secrets.IG_AGENCY_ID }}
+          IG_AGENCY_TOKEN: ${{ secrets.IG_AGENCY_TOKEN }}
           TARGET_SESSION: ${{ inputs.session || github.event.inputs.session || 'auto' }}
         run: |
           SESSION="${TARGET_SESSION:-auto}"
           echo "Target Session: $SESSION"
           if [ "$SESSION" = "report" ]; then
-            python daily_manager.py --report
+            python3 daily_manager.py --report
           else
-            python daily_manager.py --session "$SESSION"
+            python3 daily_manager.py --session "$SESSION"
           fi
 
       - name: Commit & Push Progress Advancement
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/progress.json data/growth_state.json || true
-          git commit -m "chore: auto-advance session state & growth logs [skip ci]" || echo "No changes to commit"
+          git add data/progress.json || true
+          git commit -m "chore: auto-advance session state [skip ci]" || echo "No changes to commit"
           git push
-
-      - name: Archive Session Outputs
-        uses: actions/upload-artifact@v4
-        if: always()
-        with:
-          name: session-poster-output
-          path: output/
-          retention-days: 14
