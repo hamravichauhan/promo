@@ -1,14 +1,7 @@
 name: 24/7 Multi-Session Client Acquisition & Growth Engine
 
+# ALL AUTOMATED SCHEDULES DISABLED
 on:
-  schedule:
-    # Run 5 minutes past the target hour to completely bypass GitHub's top-of-the-hour (:00) queue gridlock
-    # 09:35 AM IST (04:05 UTC) - Morning Web Playbook + Micro Growth
-    # 01:35 PM IST (08:05 UTC) - Midday Client Offer + Story Blitz
-    # 05:35 PM IST (12:05 UTC) - Evening Web Playbook + Micro Growth
-    # 09:35 PM IST (16:05 UTC) - Night Client Offer + Full Day Executive Report to Telegram
-    - cron: '5 4,8,12,16 * * *'
-
   workflow_dispatch:
     inputs:
       session:
