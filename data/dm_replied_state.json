@@ -1,0 +1,12 @@
+{
+  "replied_messages": {
+    "33087775577993933630895212590006272": {
+      "username": "ravichauhan8889",
+      "incoming_text": "Build",
+      "reply_sent": "Hey Ravichauhan8889! \ud83d\ude80 Excited to learn about your build.\n\nWe build high-performance custom websites and MVP web apps (Next.js, sub-1s speed, zero plugin bloat) with a guaranteed 14-day turnaround.\n\nAre you looking to launch a brand new site, an MVP, or redesign an existing one? Drop your project vision!",
+      "intent": "NEW BUILD / WEBSITE",
+      "timestamp": "2026-11-03T13:23:56.509980"
+    }
+  },
+  "total_replies": 1
+}

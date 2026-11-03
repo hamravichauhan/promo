@@ -28,6 +28,7 @@ from growth_engine import (
     init_client, safe_engage_leads, view_stories_for_users,
     load_growth_db, check_daily_limits, TARGET_HASHTAGS
 )
+from dm_autoresponder import check_and_reply_inbox
 
 IST = timezone(timedelta(hours=5, minutes=30))
 
@@ -84,9 +85,10 @@ def run_morning_session(dispatch_telegram=True, upload_ig=True):
     save_progress(prog)
 
     # Micro growth session
-    print("🌱 Running Morning Lead Engagement...")
+    print("🌱 Running Morning Lead Engagement & Inbox Check...")
     try:
         cl = init_client()
+        check_and_reply_inbox(cl)
         tag = random.choice(["buildinpublic", "indiehackers", "techfounder"])
         safe_engage_leads(cl, tag, max_follows=4, max_likes=6)
     except Exception as e:
@@ -126,9 +128,10 @@ def run_midday_session(dispatch_telegram=True, upload_ig=True):
     save_progress(prog)
 
     # Micro growth session
-    print("🌱 Running Midday Lead Engagement...")
+    print("🌱 Running Midday Lead Engagement & Inbox Check...")
     try:
         cl = init_client()
+        check_and_reply_inbox(cl)
         tag = random.choice(["smallbusinessowner", "ecommercebusiness", "shopifydropshipping"])
         safe_engage_leads(cl, tag, max_follows=4, max_likes=6)
     except Exception as e:
@@ -168,9 +171,10 @@ def run_evening_session(dispatch_telegram=True, upload_ig=True):
     save_progress(prog)
 
     # Micro growth session
-    print("🌱 Running Evening Lead Engagement...")
+    print("🌱 Running Evening Lead Engagement & Inbox Check...")
     try:
         cl = init_client()
+        check_and_reply_inbox(cl)
         tag = random.choice(["digitalagency", "saasstartup", "solopreneur"])
         safe_engage_leads(cl, tag, max_follows=4, max_likes=6)
     except Exception as e:
@@ -211,9 +215,10 @@ def run_night_session(dispatch_telegram=True, upload_ig=True):
     save_progress(prog)
 
     # Micro growth session
-    print("🌱 Running Night Lead Engagement...")
+    print("🌱 Running Night Lead Engagement & Inbox Check...")
     try:
         cl = init_client()
+        check_and_reply_inbox(cl)
         tag = random.choice(["startuplife", "buildinpublic", "growthhacking"])
         safe_engage_leads(cl, tag, max_follows=4, max_likes=6)
     except Exception as e:

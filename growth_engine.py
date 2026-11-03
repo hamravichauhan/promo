@@ -337,6 +337,8 @@ def main():
     parser.add_argument("--unfollow", action="store_true", help="Clean unfollow non-reciprocal leads older than 7 days")
     parser.add_argument("--dm", type=str, default=None, help="Send warm outreach DM to target username")
     parser.add_argument("--stats", action="store_true", help="Show live follower metrics and daily stats")
+    parser.add_argument("--follows", type=int, default=4, help="Max targeted follows in this session (default: 4)")
+    parser.add_argument("--likes", type=int, default=6, help="Max targeted post likes in this session (default: 6)")
 
     args = parser.parse_args()
 
@@ -365,7 +367,7 @@ def main():
         return
 
     # Default: Run safe organic growth cycle
-    safe_engage_leads(cl, target_tag, max_follows=12, max_likes=15)
+    safe_engage_leads(cl, target_tag, max_follows=args.follows, max_likes=args.likes)
     print_account_summary(cl)
 
 
