@@ -1,0 +1,33 @@
+DM for custom tools & websites 🚀
+━━━━━━━━━━━━━━━━━━━━━
+DAY 01 / 100: The 3-Second Rule That Kills 53% of Your Sales
+
+Every 1-second delay decreases conversion rates by 7%.
+
+Key takeaways to apply to your website today:
+
+• 01 / Convert Heavy PNGs to WebP
+  Uncompressed hero images are the #1 reason sites crawl. WebP cuts 80% payload.
+
+• 02 / Purge Unused Tracking Scripts
+  Every extra analytic pixel delays the browser main-thread from painting.
+
+• 03 / Deploy Cloudflare Edge CDN
+  Serve static assets from 300+ global edge locations for sub-50ms TTFB.
+
+━━━━━━━━━━━━━━━━━━━━━
+💼 NEED A HIGH-PERFORMANCE WEBSITE OR CUSTOM WEB TOOL?
+
+If you're running a business and want:
+✅ A blazing-fast, high-converting website
+✅ A custom internal software tool / automation dashboard
+✅ To eliminate manual spreadsheets and save 100+ hours every month
+
+📩 Send me a DM on Instagram: @extrovertnerd.dev (Type 'BUILD')
+📧 Or email directly: extrovertnerd.dev@gmail.com
+
+Let's build something exceptional for your business. 🚀
+
+.
+.
+#webdevelopment #pagespeed #corewebvitals #websitetips #developer #conversionrate #extrovertnerd #webdevelopment #customtools #websitetips #buildinpublic #businessgrowth #techagency
