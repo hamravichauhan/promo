@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Output renders (stored locally or artifacts)
+output/
+
+# Environment and sensitive keys
+.env
+*.env
+ig_session.json
+ig_session_*.json
+
+# OS files
+.DS_Store
+Thumbs.db
