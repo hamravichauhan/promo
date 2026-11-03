@@ -36,5 +36,62 @@
       "dms": 0
     }
   },
-  "last_run": "2026-11-03T13:20:12.557240"
+  "last_run": "2026-11-03T13:20:12.557240",
+  "tag_performance": {
+    "buildinpublic": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "indiehackers": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "startuplife": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "smallbusinessowner": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "ecommercebusiness": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "solopreneur": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "shopifydropshipping": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "saasstartup": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "digitalagency": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "techfounder": {
+      "engaged": 4,
+      "followed_back": 0,
+      "rate": 0.0
+    },
+    "growthhacking": {
+      "engaged": 0,
+      "followed_back": 0,
+      "rate": 0.0
+    }
+  }
 }
