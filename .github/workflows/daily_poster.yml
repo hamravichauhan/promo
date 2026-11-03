@@ -1,27 +1,36 @@
-name: Daily Web Playbook & Client Growth Engine
+name: 24/7 Multi-Session Client Acquisition & Growth Engine
 
 on:
   schedule:
-    # Runs everyday at 10:00 AM IST (04:30 AM UTC)
-    - cron: '30 4 * * *'
+    # 09:30 AM IST (04:00 UTC) - Morning Web Playbook + Micro Growth
+    - cron: '0 4 * * *'
+    # 01:30 PM IST (08:00 UTC) - Midday Client Offer + Story Blitz
+    - cron: '0 8 * * *'
+    # 05:30 PM IST (12:00 UTC) - Evening Web Playbook + Micro Growth
+    - cron: '0 12 * * *'
+    # 09:30 PM IST (16:00 UTC) - Night Client Offer + Full Day Executive Report to Telegram
+    - cron: '0 16 * * *'
+
   workflow_dispatch:
     inputs:
-      mode:
-        description: 'Execution Mode'
+      session:
+        description: 'Select Session to run'
         required: true
-        default: 'playbook_and_grow'
+        default: 'auto'
         type: choice
         options:
-          - playbook_and_grow
-          - client_offer_promo
-          - growth_only
-          - playbook_only
+          - auto
+          - morning
+          - midday
+          - evening
+          - night
+          - report
 
 permissions:
   contents: write
 
 jobs:
-  run_pipeline:
+  run_daily_cycle:
     runs-on: ubuntu-latest
 
     steps:
@@ -41,40 +50,34 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Execute Daily Pipeline
+      - name: Execute Session & Autonomous Growth
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
           IG_SESSION_JSON: ${{ secrets.IG_SESSION_JSON }}
           IG_USERNAME: ${{ secrets.IG_USERNAME }}
           IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
-          RUN_MODE: ${{ github.event.inputs.mode || 'playbook_and_grow' }}
+          TARGET_SESSION: ${{ github.event.inputs.session || 'auto' }}
         run: |
-          echo "Executing Mode: $RUN_MODE"
-          if [ "$RUN_MODE" = "playbook_and_grow" ]; then
-            python make_poster.py --today --send-telegram --upload-ig --grow
-          elif [ "$RUN_MODE" = "client_offer_promo" ]; then
-            python make_poster.py --promo --send-telegram --upload-ig --grow
-          elif [ "$RUN_MODE" = "growth_only" ]; then
-            python growth_engine.py --auto
-          elif [ "$RUN_MODE" = "playbook_only" ]; then
-            python make_poster.py --today --send-telegram --upload-ig
+          echo "Target Session: $TARGET_SESSION"
+          if [ "$TARGET_SESSION" = "report" ]; then
+            python daily_manager.py --report
           else
-            python make_poster.py --today --send-telegram --upload-ig --grow
+            python daily_manager.py --session "$TARGET_SESSION"
           fi
 
-      - name: Commit & Push Progress & Growth State
+      - name: Commit & Push Progress Advancement
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add data/progress.json data/growth_state.json || true
-          git commit -m "chore: update daily playbook progress & growth state [skip ci]" || echo "No changes to commit"
+          git commit -m "chore: auto-advance session state & growth logs [skip ci]" || echo "No changes to commit"
           git push
 
-      - name: Archive Today's Generated Outputs
+      - name: Archive Session Outputs
         uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: daily-poster-output
+          name: session-poster-output
           path: output/
           retention-days: 14

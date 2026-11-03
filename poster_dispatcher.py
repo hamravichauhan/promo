@@ -79,6 +79,33 @@ def send_to_telegram(photo_path: str, caption_text: str = "") -> bool:
         return False
 
 
+def send_telegram_text(message: str) -> bool:
+    """Sends a formatted text message (such as the End-of-Day Executive Report) to the Telegram bot."""
+    token = os.getenv("TELEGRAM_BOT_TOKEN", TELEGRAM_BOT_TOKEN).strip()
+    chat_id = os.getenv("TELEGRAM_CHAT_ID", TELEGRAM_CHAT_ID).strip()
+
+    if not token or not chat_id:
+        print("[-] Telegram credentials missing.")
+        return False
+
+    url = f"https://api.telegram.org/bot{token}/sendMessage"
+    try:
+        res = requests.post(
+            url,
+            json={"chat_id": chat_id, "text": message},
+            timeout=20
+        )
+        data = res.json()
+        if res.status_code == 200 and data.get("ok"):
+            return True
+        else:
+            print(f"[-] Telegram text message error: {res.text}")
+            return False
+    except Exception as e:
+        print(f"[-] Telegram text exception: {e}")
+        return False
+
+
 def upload_to_instagram(photo_path: str, caption_text: str, session_file: str = None) -> bool:
     """
     Uploads the poster directly to Instagram feed.
