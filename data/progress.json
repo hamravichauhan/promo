@@ -1,5 +1,5 @@
 {
-  "current_day": 3,
+  "current_day": 4,
   "history": [
     {
       "day": 1,
@@ -7,6 +7,18 @@
       "timestamp": "2026-11-03T12:31:18",
       "telegram_sent": true,
       "instagram_uploaded": true
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 3,
+      "title": "TTFB Explained: How to Serve Pages in 50 Milliseconds",
+      "timestamp": "2026-11-04T17:23:13.835177+05:30",
+      "ig_publish": {
+        "success": false,
+        "error": "{\"error\":{\"message\":\"Error validating access token: Session has expired on Tuesday, 03-Nov-26 10:00:00 PST. The current time is Wednesday, 04-Nov-26 03:53:13 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":463,\"fbtrace_id\":\"A3ANvlV7clDgItMPNSYaehB\"}}"
+      }
     }
   ]
 }
