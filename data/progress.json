@@ -1,5 +1,5 @@
 {
-  "current_day": 4,
+  "current_day": 5,
   "history": [
     {
       "day": 1,
@@ -30,6 +30,18 @@
       "ig_publish": {
         "success": false,
         "error": "{\"error\":{\"message\":\"Error validating access token: Session has expired on Tuesday, 03-Nov-26 10:00:00 PST. The current time is Wednesday, 04-Nov-26 11:26:09 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":463,\"fbtrace_id\":\"Aqh4FA3sGcyfo1S0Jvfil1Z\"}}"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 4,
+      "title": "The Plugin Trap: Why 25 Plugins Choke Your Website",
+      "timestamp": "2026-11-05T17:25:13.475308+05:30",
+      "ig_publish": {
+        "success": false,
+        "error": "{\"error\":{\"message\":\"Error validating access token: Session has expired on Tuesday, 03-Nov-26 10:00:00 PST. The current time is Thursday, 05-Nov-26 03:55:13 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":463,\"fbtrace_id\":\"AVZik6J12GDogupMUwQK2MZ\"}}"
       }
     }
   ],
