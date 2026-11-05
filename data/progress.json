@@ -56,7 +56,20 @@
         "media_id": "18114653975057563",
         "username": "extrovertnerd.dev"
       }
+    },
+    {
+      "session": "night",
+      "target": "extrovertnerd",
+      "type": "client_offer",
+      "offer_id": 2,
+      "title": "Stop Paying $500/Month for 6 SaaS Apps That Don't Talk to Each Other",
+      "timestamp": "2026-11-06T01:05:57.126045+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18152452681478917",
+        "username": "extrovertnerd"
+      }
     }
   ],
-  "current_offer": 2
+  "current_offer": 3
 }
