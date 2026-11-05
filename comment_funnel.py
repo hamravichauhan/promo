@@ -57,11 +57,11 @@ def record_inbound_lead(lead: dict):
         json.dump(leads, f, indent=2)
 
 
-def get_account_recent_media(ig_id: str, token: str, limit: int = 5) -> list:
+def get_account_recent_media(ig_id: str, token: str, limit: int = 3) -> list:
     """Fetches recent posts with permalinks and comment counts."""
     url = f"{GRAPH_API_BASE}/{ig_id}/media?fields=id,caption,permalink,comments_count,timestamp&limit={limit}&access_token={token}"
     try:
-        req = urllib.request.urlopen(url, timeout=15)
+        req = urllib.request.urlopen(url, timeout=25)
         data = json.loads(req.read().decode("utf-8"))
         return data.get("data", [])
     except Exception as e:
@@ -73,7 +73,7 @@ def get_media_comments(media_id: str, token: str) -> list:
     """Fetches comments for a specific media post."""
     url = f"{GRAPH_API_BASE}/{media_id}/comments?fields=id,text,username,timestamp,from&access_token={token}"
     try:
-        req = urllib.request.urlopen(url, timeout=15)
+        req = urllib.request.urlopen(url, timeout=25)
         data = json.loads(req.read().decode("utf-8"))
         return data.get("data", [])
     except Exception as e:
