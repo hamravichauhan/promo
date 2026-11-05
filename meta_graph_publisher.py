@@ -129,6 +129,52 @@ def publish_image_to_instagram(image_url: str, caption: str, target: str = "dev"
         return {"success": False, "error": err_msg}
 
 
+def publish_story_to_instagram(image_url: str, target: str = "dev") -> dict:
+    """
+    Publishes an Instagram Story via official Meta Graph API:
+    1. Create Story Container: POST /{ig-user-id}/media (image_url, media_type=STORIES)
+    2. Wait 5s for Meta ingestion
+    3. Publish Story Container: POST /{ig-user-id}/media_publish
+    """
+    ig_id, token, username = get_channel_config(target)
+    if not ig_id or not token:
+        return {"success": False, "error": f"Missing credentials for {target}"}
+
+    print(f"\n📖 [Meta Graph API] Publishing Story to @{username}...")
+    c_url = f"{GRAPH_API_BASE}/{ig_id}/media"
+    c_data = urllib.parse.urlencode({
+        "image_url": image_url,
+        "media_type": "STORIES",
+        "access_token": token
+    }).encode("utf-8")
+
+    try:
+        req = urllib.request.Request(c_url, data=c_data)
+        with urllib.request.urlopen(req, timeout=30) as res:
+            container_id = json.loads(res.read().decode("utf-8")).get("id")
+    except Exception as e:
+        print(f"[-] Story container creation notice: {e}")
+        return {"success": False, "error": str(e)}
+
+    time.sleep(5)
+
+    p_url = f"{GRAPH_API_BASE}/{ig_id}/media_publish"
+    p_data = urllib.parse.urlencode({
+        "creation_id": container_id,
+        "access_token": token
+    }).encode("utf-8")
+
+    try:
+        p_req = urllib.request.Request(p_url, data=p_data)
+        with urllib.request.urlopen(p_req, timeout=30) as p_res:
+            story_id = json.loads(p_res.read().decode("utf-8")).get("id")
+            print(f"🎉 Story successfully published to @{username}! ID: {story_id}\n")
+            return {"success": True, "story_id": story_id, "username": username}
+    except Exception as e:
+        print(f"[-] Story publish notice: {e}")
+        return {"success": False, "error": str(e)}
+
+
 def get_both_accounts_overview() -> str:
     """Generates a side-by-side summary of both live Instagram accounts."""
     dev_stats = get_account_metrics("dev")

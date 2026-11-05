@@ -28,6 +28,7 @@ from client_offers import CLIENT_OFFERS, get_client_offer
 from poster_dispatcher import send_to_telegram, send_telegram_text
 from meta_graph_publisher import (
     publish_image_to_instagram,
+    publish_story_to_instagram,
     get_account_metrics,
     get_both_accounts_overview,
 )
@@ -108,6 +109,10 @@ def run_morning_session(dispatch_telegram: bool = True, upload_ig: bool = True):
             caption=caption,
             target="dev"
         )
+        try:
+            publish_story_to_instagram(image_url=raw_img_url, target="dev")
+        except Exception as e:
+            print(f"[-] Story publish notice: {e}")
 
     # Advance curriculum
     total_days = len(PLAYBOOK_100)
@@ -176,6 +181,10 @@ def run_midday_session(dispatch_telegram: bool = True, upload_ig: bool = True):
             caption=caption,
             target="agency"
         )
+        try:
+            publish_story_to_instagram(image_url=raw_img_url, target="agency")
+        except Exception as e:
+            print(f"[-] Story publish notice: {e}")
 
     # Advance offer sequence
     prog["current_offer"] = (offer_id % len(CLIENT_OFFERS)) + 1
@@ -243,6 +252,10 @@ def run_evening_session(dispatch_telegram: bool = True, upload_ig: bool = True):
             caption=caption,
             target="dev"
         )
+        try:
+            publish_story_to_instagram(image_url=raw_img_url, target="dev")
+        except Exception as e:
+            print(f"[-] Story publish notice: {e}")
 
     # Advance curriculum
     total_days = len(PLAYBOOK_100)
@@ -312,6 +325,10 @@ def run_night_session(dispatch_telegram: bool = True, upload_ig: bool = True):
             caption=caption,
             target="agency"
         )
+        try:
+            publish_story_to_instagram(image_url=raw_img_url, target="agency")
+        except Exception as e:
+            print(f"[-] Story publish notice: {e}")
 
     # Advance offer sequence
     prog["current_offer"] = (offer_id % len(CLIENT_OFFERS)) + 1
