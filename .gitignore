@@ -2,16 +2,39 @@
 __pycache__/
 *.py[cod]
 *$py.class
+*.so
 
-# Output renders (stored locally or artifacts)
-
-
-# Environment and sensitive keys
+# Environment and sensitive keys (STRICT BLOCK)
 .env
+.env.*
 *.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Session & Token exports
 ig_session.json
 ig_session_*.json
+*.session
+*.token
+*secret*
+*credentials*
+
+# Logs and runtime artifacts
+*.log
+logs/
+*.pid
+
+# Private CRM / Inbound Lead data (confidential)
+data/inbound_leads.json
+data/growth_state.json
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
