@@ -1,5 +1,5 @@
 {
-  "current_day": 6,
+  "current_day": 7,
   "history": [
     {
       "day": 1,
@@ -68,6 +68,19 @@
         "success": true,
         "media_id": "18152452681478917",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 6,
+      "title": "JavaScript Defer vs Async: Unblock the Browser Main-Thread",
+      "timestamp": "2026-11-06T17:22:09.810016+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18175881235455554",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
