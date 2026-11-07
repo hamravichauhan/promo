@@ -1,5 +1,5 @@
 {
-  "current_day": 7,
+  "current_day": 8,
   "history": [
     {
       "day": 1,
@@ -94,6 +94,19 @@
         "success": true,
         "media_id": "18127981490487843",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 7,
+      "title": "Brotli vs Gzip: The Free 20% Bandwidth Compression Win",
+      "timestamp": "2026-11-07T16:24:21.690917+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18034915967901346",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
