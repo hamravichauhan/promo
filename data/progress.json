@@ -108,7 +108,20 @@
         "media_id": "18034915967901346",
         "username": "extrovertnerd.dev"
       }
+    },
+    {
+      "session": "night",
+      "target": "extrovertnerd",
+      "type": "client_offer",
+      "offer_id": 4,
+      "title": "Launch Your Custom Web App MVP in 14 Days Instead of 6 Months",
+      "timestamp": "2026-11-07T23:00:01.568968+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "17919109827260076",
+        "username": "extrovertnerd"
+      }
     }
   ],
-  "current_offer": 4
+  "current_offer": 5
 }
