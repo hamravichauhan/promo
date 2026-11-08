@@ -1,5 +1,5 @@
 {
-  "current_day": 8,
+  "current_day": 9,
   "history": [
     {
       "day": 1,
@@ -120,6 +120,19 @@
         "success": true,
         "media_id": "17919109827260076",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 8,
+      "title": "Why Multi-Region Edge Hosting Beats a Single Central Server",
+      "timestamp": "2026-11-08T16:34:59.682300+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18442519723183705",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
