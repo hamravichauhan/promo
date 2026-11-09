@@ -1,5 +1,5 @@
 {
-  "current_day": 9,
+  "current_day": 10,
   "history": [
     {
       "day": 1,
@@ -146,6 +146,19 @@
         "success": true,
         "media_id": "18129692917854832",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 9,
+      "title": "Native Lazy Loading: Saving Megabytes of Data on Mobile",
+      "timestamp": "2026-11-09T18:05:11.832228+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18113568911169440",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
