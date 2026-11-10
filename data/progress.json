@@ -1,5 +1,5 @@
 {
-  "current_day": 10,
+  "current_day": 11,
   "history": [
     {
       "day": 1,
@@ -172,6 +172,19 @@
         "success": true,
         "media_id": "18060760217590730",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 10,
+      "title": "SSR vs CSR: Why Single-Page Apps Suffer in SEO & Speed",
+      "timestamp": "2026-11-10T17:41:34.773773+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18095075996692697",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
