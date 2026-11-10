@@ -186,7 +186,20 @@
         "media_id": "18095075996692697",
         "username": "extrovertnerd.dev"
       }
+    },
+    {
+      "session": "night",
+      "target": "extrovertnerd",
+      "type": "client_offer",
+      "offer_id": 7,
+      "title": "Why A $3,000 Landing Page Pays For Itself In 30 Days",
+      "timestamp": "2026-11-11T03:10:35.520716+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18107822245995621",
+        "username": "extrovertnerd"
+      }
     }
   ],
-  "current_offer": 7
+  "current_offer": 8
 }
