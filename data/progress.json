@@ -212,7 +212,20 @@
         "media_id": "18106272347008531",
         "username": "extrovertnerd.dev"
       }
+    },
+    {
+      "session": "night",
+      "target": "extrovertnerd",
+      "type": "client_offer",
+      "offer_id": 8,
+      "title": "Turn Disconnected Business Data Into A Real-Time Executive Dashboard",
+      "timestamp": "2026-11-12T00:48:08.075110+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18049122707824742",
+        "username": "extrovertnerd"
+      }
     }
   ],
-  "current_offer": 8
+  "current_offer": 1
 }
