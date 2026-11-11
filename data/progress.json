@@ -1,5 +1,5 @@
 {
-  "current_day": 11,
+  "current_day": 12,
   "history": [
     {
       "day": 1,
@@ -198,6 +198,19 @@
         "success": true,
         "media_id": "18107822245995621",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 11,
+      "title": "Third-Party Script Audit: Who Is Really Slowing Down Your Site?",
+      "timestamp": "2026-11-11T17:12:30.064890+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18106272347008531",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
