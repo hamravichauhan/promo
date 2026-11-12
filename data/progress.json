@@ -238,7 +238,20 @@
         "media_id": "18079125401741785",
         "username": "extrovertnerd.dev"
       }
+    },
+    {
+      "session": "night",
+      "target": "extrovertnerd",
+      "type": "client_offer",
+      "offer_id": 1,
+      "title": "Why 85% of Business Websites Leak 70% of Qualified Leads",
+      "timestamp": "2026-11-13T03:34:38.000642+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18030672401865947",
+        "username": "extrovertnerd"
+      }
     }
   ],
-  "current_offer": 1
+  "current_offer": 2
 }
