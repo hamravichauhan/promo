@@ -1,5 +1,5 @@
 {
-  "current_day": 12,
+  "current_day": 13,
   "history": [
     {
       "day": 1,
@@ -224,6 +224,19 @@
         "success": true,
         "media_id": "18049122707824742",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 12,
+      "title": "Database Query Optimization: The Hidden Server Killer",
+      "timestamp": "2026-11-12T17:45:57.041775+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18079125401741785",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
