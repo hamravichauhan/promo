@@ -1,5 +1,5 @@
 {
-  "current_day": 13,
+  "current_day": 14,
   "history": [
     {
       "day": 1,
@@ -250,6 +250,19 @@
         "success": true,
         "media_id": "18030672401865947",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 13,
+      "title": "Cache-Control Headers: How to Keep Returning Visitors Instant",
+      "timestamp": "2026-11-13T17:24:36.426351+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18669533161002323",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
