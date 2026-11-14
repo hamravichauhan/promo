@@ -290,7 +290,20 @@
         "media_id": "18108735919967650",
         "username": "extrovertnerd.dev"
       }
+    },
+    {
+      "session": "night",
+      "target": "extrovertnerd",
+      "type": "client_offer",
+      "offer_id": 3,
+      "title": "Why High-Ticket Businesses Are Leaving WordPress & Shopify Templates",
+      "timestamp": "2026-11-14T23:13:06.114904+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18136701868769759",
+        "username": "extrovertnerd"
+      }
     }
   ],
-  "current_offer": 3
+  "current_offer": 4
 }
