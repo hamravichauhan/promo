@@ -1,5 +1,5 @@
 {
-  "current_day": 14,
+  "current_day": 15,
   "history": [
     {
       "day": 1,
@@ -276,6 +276,19 @@
         "success": true,
         "media_id": "17961194562256385",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 14,
+      "title": "The Mobile CPU Bottleneck: Why Low-End Phones Crash",
+      "timestamp": "2026-11-14T16:44:37.710341+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18108735919967650",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
