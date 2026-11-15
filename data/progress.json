@@ -1,5 +1,5 @@
 {
-  "current_day": 15,
+  "current_day": 16,
   "history": [
     {
       "day": 1,
@@ -302,6 +302,19 @@
         "success": true,
         "media_id": "18136701868769759",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 15,
+      "title": "The Google Lighthouse 100/100 Checklist: What Actually Counts",
+      "timestamp": "2026-11-15T17:17:05.337091+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "17877993216637706",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
