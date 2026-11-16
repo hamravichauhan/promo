@@ -1,5 +1,5 @@
 {
-  "current_day": 16,
+  "current_day": 17,
   "history": [
     {
       "day": 1,
@@ -328,6 +328,19 @@
         "success": true,
         "media_id": "18110240486300961",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 16,
+      "title": "The 5-Second Rule: Can Visitors Tell What You Sell Instantly?",
+      "timestamp": "2026-11-16T17:59:03.391243+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "18638326201025623",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
