@@ -368,7 +368,20 @@
         "media_id": "17969472447225462",
         "username": "extrovertnerd.dev"
       }
+    },
+    {
+      "session": "night",
+      "target": "extrovertnerd",
+      "type": "client_offer",
+      "offer_id": 6,
+      "title": "Save 20+ Hours Every Week by Automating Repetitive Business Tasks",
+      "timestamp": "2026-11-18T04:52:11.353545+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "17957062899338345",
+        "username": "extrovertnerd"
+      }
     }
   ],
-  "current_offer": 6
+  "current_offer": 7
 }
