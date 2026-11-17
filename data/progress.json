@@ -1,5 +1,5 @@
 {
-  "current_day": 17,
+  "current_day": 18,
   "history": [
     {
       "day": 1,
@@ -354,6 +354,19 @@
         "success": true,
         "media_id": "18119131703006178",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 17,
+      "title": "Above-the-Fold Blueprint: The 4 Must-Have Hero Elements",
+      "timestamp": "2026-11-17T18:19:56.424291+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "17969472447225462",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
