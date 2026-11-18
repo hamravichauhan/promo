@@ -1,5 +1,5 @@
 {
-  "current_day": 18,
+  "current_day": 19,
   "history": [
     {
       "day": 1,
@@ -380,6 +380,19 @@
         "success": true,
         "media_id": "17957062899338345",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 18,
+      "title": "Hick's Law: Why Offering 3 Competing Buttons Destroys Sales",
+      "timestamp": "2026-11-18T18:13:17.854854+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "17875992582602208",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
