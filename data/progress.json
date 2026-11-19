@@ -1,5 +1,5 @@
 {
-  "current_day": 19,
+  "current_day": 20,
   "history": [
     {
       "day": 1,
@@ -406,6 +406,19 @@
         "success": true,
         "media_id": "18139238842640771",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 19,
+      "title": "The F-Pattern Reading Flow: How Visitors Actually Scan",
+      "timestamp": "2026-11-19T18:03:02.840991+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "17918589297512102",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
