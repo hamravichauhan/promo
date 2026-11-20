@@ -1,5 +1,5 @@
 {
-  "current_day": 20,
+  "current_day": 21,
   "history": [
     {
       "day": 1,
@@ -432,6 +432,19 @@
         "success": true,
         "media_id": "18160868116496799",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 20,
+      "title": "Social Proof Placement: Stop Hiding Testimonials at the Bottom",
+      "timestamp": "2026-11-20T18:03:05.578039+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "17892332325622185",
+        "username": "extrovertnerd.dev"
       }
     }
   ],
