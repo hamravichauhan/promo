@@ -1,5 +1,5 @@
 {
-  "current_day": 24,
+  "current_day": 25,
   "history": [
     {
       "day": 1,
@@ -520,6 +520,18 @@
       "ig_publish": {
         "success": false,
         "error": "{\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OAuthException\",\"error_subcode\":2207052,\"is_transient\":false,\"error_user_msg\":\"The media could not be fetched from this URI: https://raw.githubusercontent.com/hamravichauhan/promo/main/output/day_023_playbook_dark.jpg.Please check the limitations section in our development document for more information: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating\",\"error_user_title\":\"Media download has failed. The media URI doesn't meet our requirements.\",\"fbtrace_id\":\"ADTyJvrW1nc3sqwdOha05nk\"}}"
+      }
+    },
+    {
+      "session": "morning",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 24,
+      "title": "Day 24: The ROI of a Redesign: How a Modern Web Platform Pays for Itself",
+      "timestamp": "2026-11-24T08:15:31.083917+05:30",
+      "ig_publish": {
+        "success": false,
+        "error": "{\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OAuthException\",\"error_subcode\":2207052,\"is_transient\":false,\"error_user_msg\":\"The media could not be fetched from this URI: https://raw.githubusercontent.com/hamravichauhan/promo/main/output/day_024_playbook_dark.jpg.Please check the limitations section in our development document for more information: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating\",\"error_user_title\":\"Media download has failed. The media URI doesn't meet our requirements.\",\"fbtrace_id\":\"A9X2-GYuKdsHgoxpy1SBuiJ\"}}"
       }
     }
   ],
