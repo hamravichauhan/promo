@@ -546,7 +546,20 @@
         "media_id": "18141030310638566",
         "username": "extrovertnerd"
       }
+    },
+    {
+      "session": "night",
+      "target": "extrovertnerd",
+      "type": "client_offer",
+      "offer_id": 5,
+      "title": "Upgrade From Clunky Google Drive & Email to a Branded Client Portal",
+      "timestamp": "2026-11-25T05:54:14.173958+05:30",
+      "ig_publish": {
+        "success": true,
+        "media_id": "17932534266182913",
+        "username": "extrovertnerd"
+      }
     }
   ],
-  "current_offer": 5
+  "current_offer": 6
 }
