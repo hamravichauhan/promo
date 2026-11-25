@@ -1,5 +1,5 @@
 {
-  "current_day": 25,
+  "current_day": 26,
   "history": [
     {
       "day": 1,
@@ -558,6 +558,18 @@
         "success": true,
         "media_id": "17932534266182913",
         "username": "extrovertnerd"
+      }
+    },
+    {
+      "session": "evening",
+      "target": "extrovertnerd.dev",
+      "type": "playbook",
+      "day": 25,
+      "title": "Day 25: Core Web Vitals Metric Audit: Locking in Sub-Second Load Times",
+      "timestamp": "2026-11-25T19:26:18.490953+05:30",
+      "ig_publish": {
+        "success": false,
+        "error": "{\"error\":{\"message\":\"Only photo or video can be accepted as media type.\",\"code\":9004,\"type\":\"OAuthException\",\"error_subcode\":2207052,\"is_transient\":false,\"error_user_msg\":\"The media could not be fetched from this URI: https://raw.githubusercontent.com/hamravichauhan/promo/main/output/day_025_playbook_dark.jpg.Please check the limitations section in our development document for more information: https://developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media#creating\",\"error_user_title\":\"Media download has failed. The media URI doesn't meet our requirements.\",\"fbtrace_id\":\"AWsYPFK1vjoyfIKmaP-b2UW\"}}"
       }
     }
   ],
