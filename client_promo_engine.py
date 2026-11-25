@@ -79,7 +79,7 @@ def render_client_offer_poster(offer: dict, out_path: str = None) -> str:
 
     d.text((90 + bw_pill + 85, 100), "// SCALE YOUR OPERATIONS", font=f_meta, fill=(165, 185, 210))
 
-    handle_str = "@extrovertnerd.dev ✓"
+    handle_str = "@extrovertnerd ✓"
     hw = d.textlength(handle_str, font=f_handle)
     d.text((W - 90 - hw, 98), handle_str, font=f_handle, fill=(245, 158, 11))
 
@@ -203,13 +203,13 @@ def render_client_offer_poster(offer: dict, out_path: str = None) -> str:
     dm_w = 930
     d.rounded_rectangle([130, pbox_y + 330, 130 + dm_w, pbox_y + 435], radius=18, fill=(22, 28, 42), outline=(50, 65, 88), width=2)
     d.text((160, pbox_y + 355), f'💬 DM "{keyword}" on Instagram:', font=f_ct_lbl, fill=(200, 215, 230))
-    d.text((160, pbox_y + 388), "@extrovertnerd.dev", font=f_ct_val, fill=(16, 185, 129))
+    d.text((160, pbox_y + 388), "@extrovertnerd", font=f_ct_val, fill=(16, 185, 129))
 
     # Direct Email Box
     em_x = 130 + dm_w + 30
     d.rounded_rectangle([em_x, pbox_y + 330, W - 130, pbox_y + 435], radius=18, fill=(22, 28, 42), outline=(50, 65, 88), width=2)
     d.text((em_x + 30, pbox_y + 355), "✉️ Direct Project Inquiries:", font=f_ct_lbl, fill=(200, 215, 230))
-    d.text((em_x + 30, pbox_y + 388), "extrovertnerd.dev@gmail.com", font=f_ct_val, fill=(6, 182, 212))
+    d.text((em_x + 30, pbox_y + 388), "extrovertnerd@gmail.com", font=f_ct_val, fill=(6, 182, 212))
 
     # Bottom CTA Banner
     f_btn = get_font("black", 36)
@@ -270,8 +270,8 @@ def generate_client_offer_caption(offer: dict) -> str:
         "✅ Custom internal tools & automation dashboards",
         "✅ 14-day turnaround with fixed milestones and zero hidden fees",
         "",
-        f"📩 Send a DM on Instagram with the word '{keyword}' to @extrovertnerd.dev",
-        "📧 Or email directly: extrovertnerd.dev@gmail.com",
+        f"📩 Send a DM on Instagram with the word '{keyword}' to @extrovertnerd",
+        "📧 Or email directly: extrovertnerd@gmail.com",
         "",
         "We'll review your project and send you a custom proposal within 24 hours. 🚀",
         "",
